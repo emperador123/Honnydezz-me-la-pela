@@ -1,1 +1,1 @@
-# Honnydezz-me-la-pela
+loadstring(game:HttpGet("https://pastebin.com/raw/a8KLxDNm"))()
