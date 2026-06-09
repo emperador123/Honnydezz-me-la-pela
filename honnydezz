@@ -1,0 +1,159 @@
+-- APEKAHUB - Obfuscated by DAVID
+local a = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local b = a:CreateWindow({
+    Name="APEKAHUB",
+    LoadingTitle="APEKAHUB",
+    LoadingSubtitle="DAVID",
+    ConfigurationSaving={Enabled=true,FolderName="APEKAHUB",FileName="Config"},
+    Discord={Enabled=false},
+    KeySystem=false
+})
+
+local c = b:CreateTab("Principal",4483362458)
+
+local d,e,f,g = false,false,false,false
+
+c:CreateToggle({
+    Name="🔥 Auto Pesa Súper Rápida",
+    CurrentValue=false,
+    Flag="s1",
+    Callback=function(h)
+        d=h
+        if h then 
+            spawn(function()
+                while d do 
+                    pcall(function()
+                        game:GetService("ReplicatedStorage"):WaitForChild("addStrength"):FireServer()
+                    end)
+                    task.wait(0.001)
+                end 
+            end)
+        end 
+    end
+})
+
+c:CreateToggle({
+    Name="💪 Auto Pushups",
+    CurrentValue=false,
+    Flag="s2",
+    Callback=function(h)
+        e=h
+        if h then 
+            spawn(function()
+                while e do 
+                    pcall(function()
+                        game:GetService("ReplicatedStorage"):WaitForChild("ShieldTrainingEvent"):FireServer()
+                    end)
+                    task.wait(0.001)
+                end 
+            end)
+        end 
+    end
+})
+
+c:CreateToggle({
+    Name="✨ Auto Aura",
+    CurrentValue=false,
+    Flag="s3",
+    Callback=function(h)
+        f=h
+        if h then 
+            spawn(function()
+                while f do 
+                    pcall(function()
+                        game:GetService("ReplicatedStorage"):WaitForChild("AuraEvent"):FireServer()
+                    end)
+                    task.wait(0.001)
+                end 
+            end)
+        end 
+    end
+})
+
+c:CreateToggle({
+    Name="♻️ Auto Rebirth",
+    CurrentValue=false,
+    Flag="s4",
+    Callback=function(h)
+        g=h
+        if h then 
+            spawn(function()
+                while g do 
+                    pcall(function()
+                        game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("rebirthEvent"):FireServer()
+                    end)
+                    task.wait(0.5)
+                end 
+            end)
+        end 
+    end
+})
+
+c:CreateSection("Ajustes")
+c:CreateSlider({
+    Name="Delay General",
+    Range={0.001,1},
+    Increment=0.001,
+    CurrentValue=0.001,
+    Callback=function() end
+})
+
+c:CreateSection("Manual")
+c:CreateButton({
+    Name="🔥 Pesa",
+    Callback=function()
+        pcall(function()
+            game:GetService("ReplicatedStorage"):WaitForChild("addStrength"):FireServer()
+        end)
+    end
+})
+
+c:CreateButton({
+    Name="💪 Pushups",
+    Callback=function()
+        pcall(function()
+            game:GetService("ReplicatedStorage"):WaitForChild("ShieldTrainingEvent"):FireServer()
+        end)
+    end
+})
+
+c:CreateButton({
+    Name="✨ Aura",
+    Callback=function()
+        pcall(function()
+            game:GetService("ReplicatedStorage"):WaitForChild("AuraEvent"):FireServer()
+        end)
+    end
+})
+
+c:CreateButton({
+    Name="♻️ Rebirth",
+    Callback=function()
+        pcall(function()
+            game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("rebirthEvent"):FireServer()
+        end)
+    end
+})
+
+c:CreateButton({
+    Name="🚀 Todo x50",
+    Callback=function()
+        for i=1,50 do
+            pcall(function()game:GetService("ReplicatedStorage"):WaitForChild("addStrength"):FireServer()end)
+            pcall(function()game:GetService("ReplicatedStorage"):WaitForChild("ShieldTrainingEvent"):FireServer()end)
+            pcall(function()game:GetService("ReplicatedStorage"):WaitForChild("AuraEvent"):FireServer()end)
+            pcall(function()game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("rebirthEvent"):FireServer()end)
+        end 
+    end
+})
+
+c:CreateParagraph({
+    Title="APEKAHUB",
+    Content="By DAVID\nActiva los toggles según necesites."
+})
+
+a:Notify({
+    Title="APEKAHUB",
+    Content="Script cargado - Ofuscado",
+    Duration=5
+})
